@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/608858856550438816/c2d3e37e627d4585b533f95a002d6786/artifacts
+end_time: 1738256397231
+entry_point_name: ''
+experiment_id: '608858856550438816'
+lifecycle_stage: active
+run_id: c2d3e37e627d4585b533f95a002d6786
+run_name: industrious-tern-319
+run_uuid: c2d3e37e627d4585b533f95a002d6786
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738256397042
+status: 3
+tags: []
+user_id: aghakeivan

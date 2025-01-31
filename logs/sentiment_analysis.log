@@ -1,0 +1,505 @@
+Starting sentiment analysis...
+Traceback (most recent call last):
+  File "/Users/aghakeivan/Documents/Stocks/scripts/sentiment_analysis.py", line 64, in <module>
+    main()
+  File "/Users/aghakeivan/Documents/Stocks/scripts/sentiment_analysis.py", line 60, in main
+    process_sentiment()
+  File "/Users/aghakeivan/Documents/Stocks/scripts/sentiment_analysis.py", line 53, in process_sentiment
+    sentiments = analyze_sentiment(headlines)
+  File "/Users/aghakeivan/Documents/Stocks/scripts/sentiment_analysis.py", line 25, in analyze_sentiment
+    response = client.chat.completions.create(
+  File "/opt/anaconda3/envs/stock_analysis_env/lib/python3.9/site-packages/openai/_utils/_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/anaconda3/envs/stock_analysis_env/lib/python3.9/site-packages/openai/resources/chat/completions.py", line 850, in create
+    return self._post(
+  File "/opt/anaconda3/envs/stock_analysis_env/lib/python3.9/site-packages/openai/_base_client.py", line 1283, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/opt/anaconda3/envs/stock_analysis_env/lib/python3.9/site-packages/openai/_base_client.py", line 960, in request
+    return self._request(
+  File "/opt/anaconda3/envs/stock_analysis_env/lib/python3.9/site-packages/openai/_base_client.py", line 996, in _request
+    response = self._client.send(
+  File "/opt/anaconda3/envs/stock_analysis_env/lib/python3.9/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+  File "/opt/anaconda3/envs/stock_analysis_env/lib/python3.9/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "/opt/anaconda3/envs/stock_analysis_env/lib/python3.9/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/opt/anaconda3/envs/stock_analysis_env/lib/python3.9/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "/opt/anaconda3/envs/stock_analysis_env/lib/python3.9/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/opt/anaconda3/envs/stock_analysis_env/lib/python3.9/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/opt/anaconda3/envs/stock_analysis_env/lib/python3.9/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+  File "/opt/anaconda3/envs/stock_analysis_env/lib/python3.9/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+  File "/opt/anaconda3/envs/stock_analysis_env/lib/python3.9/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/opt/anaconda3/envs/stock_analysis_env/lib/python3.9/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+  File "/opt/anaconda3/envs/stock_analysis_env/lib/python3.9/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+  File "/opt/anaconda3/envs/stock_analysis_env/lib/python3.9/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+  File "/opt/anaconda3/envs/stock_analysis_env/lib/python3.9/site-packages/httpcore/_backends/sync.py", line 128, in read
+    return self._sock.recv(max_bytes)
+  File "/opt/anaconda3/envs/stock_analysis_env/lib/python3.9/ssl.py", line 1260, in recv
+    return self.read(buflen)
+  File "/opt/anaconda3/envs/stock_analysis_env/lib/python3.9/ssl.py", line 1135, in read
+    return self._sslobj.read(len)
+KeyboardInterrupt
+2025-01-30 16:22:46,258 - INFO - 🚀 Starting sentiment analysis pipeline...
+2025-01-30 16:22:46,258 - INFO - Fetching news from API...
+2025-01-30 16:22:46,530 - ERROR - ⚠️ API request failed: 401 Client Error: Unauthorized for url: https://newsapi.org/v2/everything?q=stock+market&apiKey=YOUR_API_KEY
+2025-01-30 16:22:46,532 - WARNING - ⚠️ No articles fetched. Exiting.
+2025-01-30 16:22:46,532 - INFO - ✅ Sentiment analysis pipeline completed.
+2025-01-30 16:28:45,965 - INFO - 🚀 Starting sentiment analysis pipeline...
+2025-01-30 16:28:45,965 - INFO - Fetching news from API...
+2025-01-30 16:28:46,198 - INFO - ✅ Successfully fetched 100 articles.
+2025-01-30 16:28:46,198 - INFO - Starting sentiment analysis...
+2025-01-30 16:28:46,198 - INFO - 🔹 Processed 1/100 articles.
+2025-01-30 16:28:47,204 - INFO - 🔹 Processed 2/100 articles.
+2025-01-30 16:28:48,209 - INFO - 🔹 Processed 3/100 articles.
+2025-01-30 16:28:49,214 - INFO - 🔹 Processed 4/100 articles.
+2025-01-30 16:28:50,220 - INFO - 🔹 Processed 5/100 articles.
+2025-01-30 16:28:51,223 - INFO - 🔹 Processed 6/100 articles.
+2025-01-30 16:28:52,229 - INFO - 🔹 Processed 7/100 articles.
+2025-01-30 16:28:53,235 - INFO - 🔹 Processed 8/100 articles.
+2025-01-30 16:28:54,240 - INFO - 🔹 Processed 9/100 articles.
+2025-01-30 16:28:55,245 - INFO - 🔹 Processed 10/100 articles.
+2025-01-30 16:28:56,251 - INFO - 🔹 Processed 11/100 articles.
+2025-01-30 16:28:57,257 - INFO - 🔹 Processed 12/100 articles.
+2025-01-30 16:28:58,262 - INFO - 🔹 Processed 13/100 articles.
+2025-01-30 16:28:59,264 - INFO - 🔹 Processed 14/100 articles.
+2025-01-30 16:29:00,270 - INFO - 🔹 Processed 15/100 articles.
+2025-01-30 16:29:10,897 - INFO - 🚀 Starting sentiment analysis pipeline...
+2025-01-30 16:29:10,897 - INFO - Fetching news from API...
+2025-01-30 16:29:11,085 - INFO - ✅ Successfully fetched 100 articles.
+2025-01-30 16:29:11,086 - INFO - Starting sentiment analysis...
+2025-01-30 16:29:11,086 - INFO - 🔹 Processed 1/100 articles.
+2025-01-30 16:29:12,091 - INFO - 🔹 Processed 2/100 articles.
+2025-01-30 16:29:13,097 - INFO - 🔹 Processed 3/100 articles.
+2025-01-30 16:29:14,103 - INFO - 🔹 Processed 4/100 articles.
+2025-01-30 16:29:15,108 - INFO - 🔹 Processed 5/100 articles.
+2025-01-30 16:29:16,115 - INFO - 🔹 Processed 6/100 articles.
+2025-01-30 16:29:17,121 - INFO - 🔹 Processed 7/100 articles.
+2025-01-30 16:29:18,126 - INFO - 🔹 Processed 8/100 articles.
+2025-01-30 16:29:19,132 - INFO - 🔹 Processed 9/100 articles.
+2025-01-30 16:29:20,137 - INFO - 🔹 Processed 10/100 articles.
+2025-01-30 16:29:21,143 - INFO - 🔹 Processed 11/100 articles.
+2025-01-30 16:29:22,144 - INFO - 🔹 Processed 12/100 articles.
+2025-01-30 16:29:23,150 - INFO - 🔹 Processed 13/100 articles.
+2025-01-30 16:29:24,155 - INFO - 🔹 Processed 14/100 articles.
+2025-01-30 16:29:25,160 - INFO - 🔹 Processed 15/100 articles.
+2025-01-30 16:29:26,166 - INFO - 🔹 Processed 16/100 articles.
+2025-01-30 16:29:27,171 - INFO - 🔹 Processed 17/100 articles.
+2025-01-30 16:29:28,177 - INFO - 🔹 Processed 18/100 articles.
+2025-01-30 16:29:29,182 - INFO - 🔹 Processed 19/100 articles.
+2025-01-30 16:29:30,188 - INFO - 🔹 Processed 20/100 articles.
+2025-01-30 16:29:31,194 - INFO - 🔹 Processed 21/100 articles.
+2025-01-30 16:29:32,200 - INFO - 🔹 Processed 22/100 articles.
+2025-01-30 16:29:33,207 - INFO - 🔹 Processed 23/100 articles.
+2025-01-30 16:29:34,212 - INFO - 🔹 Processed 24/100 articles.
+2025-01-30 16:29:35,213 - INFO - 🔹 Processed 25/100 articles.
+2025-01-30 16:29:36,216 - INFO - 🔹 Processed 26/100 articles.
+2025-01-30 16:29:37,221 - INFO - 🔹 Processed 27/100 articles.
+2025-01-30 16:29:38,226 - INFO - 🔹 Processed 28/100 articles.
+2025-01-30 16:29:39,226 - INFO - 🔹 Processed 29/100 articles.
+2025-01-30 16:29:40,232 - INFO - 🔹 Processed 30/100 articles.
+2025-01-30 16:29:41,237 - INFO - 🔹 Processed 31/100 articles.
+2025-01-30 16:29:42,242 - INFO - 🔹 Processed 32/100 articles.
+2025-01-30 16:29:43,245 - INFO - 🔹 Processed 33/100 articles.
+2025-01-30 16:29:44,251 - INFO - 🔹 Processed 34/100 articles.
+2025-01-30 16:29:45,256 - INFO - 🔹 Processed 35/100 articles.
+2025-01-30 16:29:46,262 - INFO - 🔹 Processed 36/100 articles.
+2025-01-30 16:29:47,268 - INFO - 🔹 Processed 37/100 articles.
+2025-01-30 16:29:48,273 - INFO - 🔹 Processed 38/100 articles.
+2025-01-30 16:29:55,865 - INFO - 🚀 Starting sentiment analysis pipeline...
+2025-01-30 16:29:55,866 - INFO - Fetching news from API...
+2025-01-30 16:29:56,106 - INFO - ✅ Successfully fetched 100 articles.
+2025-01-30 16:29:56,108 - INFO - Starting sentiment analysis...
+2025-01-30 16:29:56,108 - INFO - 🔹 Processed 1/100 articles.
+2025-01-30 16:29:57,115 - INFO - 🔹 Processed 2/100 articles.
+2025-01-30 16:29:58,123 - INFO - 🔹 Processed 3/100 articles.
+2025-01-30 16:29:59,133 - INFO - 🔹 Processed 4/100 articles.
+2025-01-30 16:30:00,141 - INFO - 🔹 Processed 5/100 articles.
+2025-01-30 16:30:01,147 - INFO - 🔹 Processed 6/100 articles.
+2025-01-30 16:30:02,154 - INFO - 🔹 Processed 7/100 articles.
+2025-01-30 16:30:03,162 - INFO - 🔹 Processed 8/100 articles.
+2025-01-30 16:30:04,169 - INFO - 🔹 Processed 9/100 articles.
+2025-01-30 16:30:05,174 - INFO - 🔹 Processed 10/100 articles.
+2025-01-30 16:30:06,182 - INFO - 🔹 Processed 11/100 articles.
+2025-01-30 16:30:07,186 - INFO - 🔹 Processed 12/100 articles.
+2025-01-30 16:30:08,190 - INFO - 🔹 Processed 13/100 articles.
+2025-01-30 16:30:09,198 - INFO - 🔹 Processed 14/100 articles.
+2025-01-30 16:30:10,205 - INFO - 🔹 Processed 15/100 articles.
+2025-01-30 16:30:11,212 - INFO - 🔹 Processed 16/100 articles.
+2025-01-30 16:30:12,220 - INFO - 🔹 Processed 17/100 articles.
+2025-01-30 16:30:13,230 - INFO - 🔹 Processed 18/100 articles.
+2025-01-30 16:30:14,241 - INFO - 🔹 Processed 19/100 articles.
+2025-01-30 16:30:15,248 - INFO - 🔹 Processed 20/100 articles.
+2025-01-30 16:30:16,257 - INFO - 🔹 Processed 21/100 articles.
+2025-01-30 16:30:17,266 - INFO - 🔹 Processed 22/100 articles.
+2025-01-30 16:30:18,276 - INFO - 🔹 Processed 23/100 articles.
+2025-01-30 16:30:19,283 - INFO - 🔹 Processed 24/100 articles.
+2025-01-30 16:30:20,290 - INFO - 🔹 Processed 25/100 articles.
+2025-01-30 16:30:21,299 - INFO - 🔹 Processed 26/100 articles.
+2025-01-30 16:30:22,304 - INFO - 🔹 Processed 27/100 articles.
+2025-01-30 16:30:23,309 - INFO - 🔹 Processed 28/100 articles.
+2025-01-30 16:30:24,317 - INFO - 🔹 Processed 29/100 articles.
+2025-01-30 16:30:25,323 - INFO - 🔹 Processed 30/100 articles.
+2025-01-30 16:30:26,331 - INFO - 🔹 Processed 31/100 articles.
+2025-01-30 16:30:27,336 - INFO - 🔹 Processed 32/100 articles.
+2025-01-30 16:30:28,344 - INFO - 🔹 Processed 33/100 articles.
+2025-01-30 16:30:29,350 - INFO - 🔹 Processed 34/100 articles.
+2025-01-30 16:30:30,358 - INFO - 🔹 Processed 35/100 articles.
+2025-01-30 16:30:31,363 - INFO - 🔹 Processed 36/100 articles.
+2025-01-30 16:30:32,372 - INFO - 🔹 Processed 37/100 articles.
+2025-01-30 16:30:33,381 - INFO - 🔹 Processed 38/100 articles.
+2025-01-30 16:30:34,389 - INFO - 🔹 Processed 39/100 articles.
+2025-01-30 16:30:35,393 - INFO - 🔹 Processed 40/100 articles.
+2025-01-30 16:30:36,401 - INFO - 🔹 Processed 41/100 articles.
+2025-01-30 16:30:37,407 - INFO - 🔹 Processed 42/100 articles.
+2025-01-30 16:30:38,416 - INFO - 🔹 Processed 43/100 articles.
+2025-01-30 16:31:11,982 - INFO - 🚀 Starting sentiment analysis pipeline...
+2025-01-30 16:31:11,983 - INFO - Fetching news from API...
+2025-01-30 16:31:12,474 - INFO - ✅ Successfully fetched 100 articles.
+2025-01-30 16:31:12,477 - INFO - Starting sentiment analysis...
+2025-01-30 16:31:12,479 - INFO - 🔹 Processed 1/100 articles.
+2025-01-30 16:31:13,486 - INFO - 🔹 Processed 2/100 articles.
+2025-01-30 16:31:14,496 - INFO - 🔹 Processed 3/100 articles.
+2025-01-30 16:31:15,505 - INFO - 🔹 Processed 4/100 articles.
+2025-01-30 16:31:16,511 - INFO - 🔹 Processed 5/100 articles.
+2025-01-30 16:31:17,516 - INFO - 🔹 Processed 6/100 articles.
+2025-01-30 16:31:18,523 - INFO - 🔹 Processed 7/100 articles.
+2025-01-30 16:31:19,533 - INFO - 🔹 Processed 8/100 articles.
+2025-01-30 16:33:58,530 - INFO - 🚀 Starting sentiment analysis pipeline...
+2025-01-30 16:33:58,531 - INFO - Fetching news from API...
+2025-01-30 16:33:58,833 - INFO - ✅ Successfully fetched 100 articles.
+2025-01-30 16:33:58,834 - INFO - Starting sentiment analysis...
+2025-01-30 16:33:58,834 - INFO - 🔹 Processed 1/100 articles - Remember When Nanotech Was the Next Big Thing?
+2025-01-30 16:33:58,834 - INFO - 🔹 Processed 2/100 articles - The US stock market will close on January 9 in remembrance of Jimmy Carter
+2025-01-30 16:33:58,834 - INFO - 🔹 Processed 3/100 articles - Jamie Dimon sounds the alarm on stocks, says the market is looking 'kind of inflated'
+2025-01-30 16:33:58,834 - INFO - 🔹 Processed 4/100 articles - Intel's former CEO says the market is getting DeepSeek wrong after AI chip stock rout
+2025-01-30 16:33:58,834 - INFO - 🔹 Processed 5/100 articles - 'Due for a full-blown correction': Why one CIO expects a 15% stock-market pullback early in 2025 — and how to prepare
+2025-01-30 16:33:58,842 - INFO - ✅ Sentiment analysis results saved successfully.
+2025-01-30 16:33:58,842 - INFO - ✅ Sentiment analysis pipeline completed.
+2025-01-30 16:37:23,969 - INFO - 🚀 Starting sentiment analysis pipeline...
+2025-01-30 16:37:23,970 - INFO - Fetching news from API...
+2025-01-30 16:37:24,294 - INFO - ✅ Successfully fetched 100 articles.
+2025-01-30 16:37:24,295 - INFO - Starting sentiment analysis...
+2025-01-30 16:37:24,295 - INFO - 🔹 Processed 1/100 articles - Remember When Nanotech Was the Next Big Thing?
+2025-01-30 16:37:24,296 - INFO - 🔹 Processed 2/100 articles - The US stock market will close on January 9 in remembrance of Jimmy Carter
+2025-01-30 16:37:24,296 - INFO - 🔹 Processed 3/100 articles - Jamie Dimon sounds the alarm on stocks, says the market is looking 'kind of inflated'
+2025-01-30 16:37:24,296 - INFO - 🔹 Processed 4/100 articles - Intel's former CEO says the market is getting DeepSeek wrong after AI chip stock rout
+2025-01-30 16:37:24,296 - INFO - 🔹 Processed 5/100 articles - 'Due for a full-blown correction': Why one CIO expects a 15% stock-market pullback early in 2025 — and how to prepare
+2025-01-30 16:37:24,296 - INFO - 🔹 Processed 6/100 articles - Walmart's multi-store managers can now make up to $620,000
+2025-01-30 16:37:24,296 - INFO - 🔹 Processed 7/100 articles - Watch the NVIDIA CES 2025 press conference live: Monday, 9:30PM ET
+2025-01-30 16:37:24,296 - INFO - 🔹 Processed 8/100 articles - Dow Jones Futures: Stock Market Sells Off As Nvidia, Palantir Tumble; What To Do Now
+2025-01-30 16:37:24,296 - INFO - 🔹 Processed 9/100 articles - U.S. stock markets tumble as investors worry about DeepSeek
+2025-01-30 16:37:24,296 - INFO - 🔹 Processed 10/100 articles - Tech stocks stage partial recovery after market rout sparked by DeepSeek's rise
+2025-01-30 16:37:24,296 - INFO - 🔹 Processed 11/100 articles - Apple's China problems keep weighing on the stock
+2025-01-30 16:37:24,296 - INFO - 🔹 Processed 12/100 articles - Stock market today: Dow, S&P 500, Nasdaq sink as jobs report blows past expectations
+2025-01-30 16:37:24,296 - INFO - 🔹 Processed 13/100 articles - Stock market today: Nasdaq clobbered, S&P 500 tumbles as AI fears rock Nvidia, tech stocks
+2025-01-30 16:37:24,296 - INFO - 🔹 Processed 14/100 articles - Worried About a Stock Market Crash? Here's What Warren Buffett Has to Say About It.
+2025-01-30 16:37:24,297 - INFO - 🔹 Processed 15/100 articles - Dow Jones Futures: Stock Market Ends 2024 On Weak Note; Tesla Deliveries Due
+2025-01-30 16:37:24,297 - INFO - 🔹 Processed 16/100 articles - Stock market today: Dow, S&P 500, Nasdaq sell off amid jobs report surprise, inflation worries
+2025-01-30 16:37:24,297 - INFO - 🔹 Processed 17/100 articles - 4 Things Warren Buffett Would Likely Do After a Stock Market Crash
+2025-01-30 16:37:24,297 - INFO - 🔹 Processed 18/100 articles - Newmont Corporation (NEM) Stock Declines While Market Improves: Some Information for Investors
+2025-01-30 16:37:24,297 - INFO - 🔹 Processed 19/100 articles - Honor’s Magic 7 Pro looks flagship through and through
+2025-01-30 16:37:24,297 - INFO - 🔹 Processed 20/100 articles - 3 US Dividend Stocks With Up To 4.8% Yield To Enhance Your Portfolio
+2025-01-30 16:37:24,297 - INFO - 🔹 Processed 21/100 articles - DeepSeek AI is crushing the competition and triggering an AI stock bloodbath
+2025-01-30 16:37:24,297 - INFO - 🔹 Processed 22/100 articles - Fresh job market data, Nvidia falls from record highs: Catalysts
+2025-01-30 16:37:24,297 - INFO - 🔹 Processed 23/100 articles - 35-Year-Old Dividend Investor Hits Nearly $1,000 Per Month, Shares His 10 Stock Picks – 'I'm Quite Happy With That'
+2025-01-30 16:37:24,297 - INFO - 🔹 Processed 24/100 articles - Retired Dividend Investor Earning $5,000 Per Month on $320K Investment Shares His 5 Stock Picks – 'I'm Not Your Conventional Investor'
+2025-01-30 16:37:24,297 - INFO - 🔹 Processed 25/100 articles - Stock market today: Dow revives as Nasdaq, S&P 500 slide amid cratered hopes for 2025 rate cuts
+2025-01-30 16:37:24,297 - INFO - 🔹 Processed 26/100 articles - 5 Predictions for the Stock Market in 2025 -- and Which Stocks Will Soar the Most If They're Right
+2025-01-30 16:37:24,297 - INFO - 🔹 Processed 27/100 articles - 3 Ultra-Safe Vanguard ETFs to Buy, Even If There's a Stock Market Sell-Off in 2025
+2025-01-30 16:37:24,297 - INFO - 🔹 Processed 28/100 articles - Stock market today: Dow, S&P 500, Nasdaq sell off amid jobs report surprise, fresh inflation worries
+2025-01-30 16:37:24,297 - INFO - 🔹 Processed 29/100 articles - Masayoshi Son Bet Billions on the iPhone—3 Years Before It Existed
+2025-01-30 16:37:24,297 - INFO - 🔹 Processed 30/100 articles - Nvidia’s GeForce RTX 5090 Review: A Video Card With AI
+2025-01-30 16:37:24,297 - INFO - 🔹 Processed 31/100 articles - Should Value Investors Buy Concrete Pumping Holdings (BBCP) Stock?
+2025-01-30 16:37:24,298 - INFO - 🔹 Processed 32/100 articles - Tesla Sales Drop for First Time in Over a Decade While China’s BYD Rises
+2025-01-30 16:37:24,298 - INFO - 🔹 Processed 33/100 articles - Nvidia sheds $600 billion in market cap as Chinese AI startup DeepSeek spurs brutal rout of tech stocks
+2025-01-30 16:37:24,298 - INFO - 🔹 Processed 34/100 articles - 14 of the best specialty items to get at Aldi this month for $5 or less
+2025-01-30 16:37:24,298 - INFO - 🔹 Processed 35/100 articles - Morgan Freeman may have scored a 3,000% return on Tesla stock: 'I'm a huge fan of Elon Musk'
+2025-01-30 16:37:24,298 - INFO - 🔹 Processed 36/100 articles - Samsung Galaxy S25 Ultra vs. OnePlus 13: A battle of big, powerful Android phones
+2025-01-30 16:37:24,298 - INFO - 🔹 Processed 37/100 articles - The late Charlie Munger made a contrarian bet at 99, doubling his money — and clashed with Elon Musk over taking risks
+2025-01-30 16:37:24,298 - INFO - 🔹 Processed 38/100 articles - LVMH's Bernard Arnault ousts Larry Ellison as the world's 4th-richest person after gaining $15 billion in one day
+2025-01-30 16:37:24,298 - INFO - 🔹 Processed 39/100 articles - DeepSeek unleashes ‘Janus Pro 7B’ vision model amidst AI stock bloodbath, igniting fresh fears of Chinese tech dominance
+2025-01-30 16:37:24,298 - INFO - 🔹 Processed 40/100 articles - Peter Schiff Warns 'A Financial Tsunami' Will Crash US Markets As Japan's Yields Soar
+2025-01-30 16:37:24,298 - INFO - 🔹 Processed 41/100 articles - Nvidia stock jumps 4% before CEO Jensen Huang's CES keynote
+2025-01-30 16:37:24,298 - INFO - 🔹 Processed 42/100 articles - Top 25 global banks post 27% increase in market cap in 2024, reveals GlobalData
+2025-01-30 16:37:24,298 - INFO - 🔹 Processed 43/100 articles - 3 Dividend Stocks To Consider With Yields Up To 5.9%
+2025-01-30 16:37:24,298 - INFO - 🔹 Processed 44/100 articles - 'Big Short' investor Michael Burry kept quiet, piled into China tech, and won big with a stock bet in 2024
+2025-01-30 16:37:24,298 - INFO - 🔹 Processed 45/100 articles - Investors more 'selective' after DeepSeek sparked tech sell-off
+2025-01-30 16:37:24,299 - INFO - 🔹 Processed 46/100 articles - Elon Musk, Jeff Bezos, and 8 other tycoons got $500 billion richer in 2024 — and are now worth more than $2 trillion
+2025-01-30 16:37:24,299 - INFO - 🔹 Processed 47/100 articles - DeepSeek Releases Open-Source AI Image Generator as American Stocks Continue to Crater
+2025-01-30 16:37:24,299 - INFO - 🔹 Processed 48/100 articles - 2025 will be the year of EV bargains – here are the 9 best second-hand buys that I've driven
+2025-01-30 16:37:24,299 - INFO - 🔹 Processed 49/100 articles - Exxon Mobil Corporation's (NYSE:XOM) Fundamentals Look Pretty Strong: Could The Market Be Wrong About The Stock?
+2025-01-30 16:37:24,299 - INFO - 🔹 Processed 50/100 articles - Who foresaw the DeepSeek-caused sell-off of Magnificent 7 stocks? Hedge funds, which have been cutting exposure for months
+2025-01-30 16:37:24,299 - INFO - 🔹 Processed 51/100 articles - Surgeon general warning, TikTok ban benefits: Asking for a Trend
+2025-01-30 16:37:24,299 - INFO - 🔹 Processed 52/100 articles - Investors worry DeepSeek reduces AI chip demand, but there's a case for remaining bullish on Nvidia
+2025-01-30 16:37:24,299 - INFO - 🔹 Processed 53/100 articles - Let's Be Honest, AI at CES 2025 Was All About Nvidia
+2025-01-30 16:37:24,299 - INFO - 🔹 Processed 54/100 articles - What do surging bond yields mean for your finances?
+2025-01-30 16:37:24,299 - INFO - 🔹 Processed 55/100 articles - Ford Plunges 27% in 6 Months: Buy, Sell or Hold the Stock?
+2025-01-30 16:37:24,299 - INFO - 🔹 Processed 56/100 articles - DeepSeek's ultra-cost-effective AI plummets NVIDIA stock prices — wiping out $500 billion in market valuation
+2025-01-30 16:37:24,299 - INFO - 🔹 Processed 57/100 articles - Cold weather forecasts for January spark a 24% surge in natural gas futures
+2025-01-30 16:37:24,299 - INFO - 🔹 Processed 58/100 articles - Investor Hits $300K Goal With $4.4M Portfolio, Shares His Top 10 Stock Picks – 35 Years Of Investing, Strategy and Big Wins From IMMU
+2025-01-30 16:37:24,299 - INFO - 🔹 Processed 59/100 articles - DeepSeek is going to be the biggest topic in tech earnings this week, analysts say
+2025-01-30 16:37:24,299 - INFO - 🔹 Processed 60/100 articles - Most Americans see economic difficulty ahead in 2025 but not Republicans
+2025-01-30 16:37:24,299 - INFO - 🔹 Processed 61/100 articles - I'm a financial writer, but I'm not teaching my teenagers about investing. It's hard to get excited about stocks before you have an income.
+2025-01-30 16:37:24,299 - INFO - 🔹 Processed 62/100 articles - MicroStrategy's Big Bet On Bitcoin Went Stratospheric
+2025-01-30 16:37:24,299 - INFO - 🔹 Processed 63/100 articles - Insiders At Las Vegas Sands Sold US$17m In Stock, Alluding To Potential Weakness
+2025-01-30 16:37:24,299 - INFO - 🔹 Processed 64/100 articles - Loud luxury and logo-mania need a big revival and quiet luxury needs to die if brands want to keep making money, BofA analysts say
+2025-01-30 16:37:24,300 - INFO - 🔹 Processed 65/100 articles - Top White House advisor says DeepSeek may have used OpenAI's models for training
+2025-01-30 16:37:24,300 - INFO - 🔹 Processed 66/100 articles - Analysts embrace ServiceTitan’s market-share potential in parade of buy ratings
+2025-01-30 16:37:24,300 - INFO - 🔹 Processed 67/100 articles - Airbus had a way better 2024 than Boeing after delivering 766 commercial aircraft
+2025-01-30 16:37:24,300 - INFO - 🔹 Processed 68/100 articles - Intel Shares Surge 7.6% Amid Acquisition Rumors
+2025-01-30 16:37:24,300 - INFO - 🔹 Processed 69/100 articles - DeepSeek proves AI innovation isn’t ‘dictated’ by Silicon Valley
+2025-01-30 16:37:24,300 - INFO - 🔹 Processed 70/100 articles - Dividend Investor Retired at 39 Living Off Dividend Income Shares His Top 4 Stocks – 'It's Absolutely Doable'
+2025-01-30 16:37:24,300 - INFO - 🔹 Processed 71/100 articles - Why Tech Stocks Are Dropping Monday
+2025-01-30 16:37:24,300 - INFO - 🔹 Processed 72/100 articles - If You Invested $10,000 In Johnson & Johnson Stock 10 Years Ago, How Much Would You Have Now?
+2025-01-30 16:37:24,300 - INFO - 🔹 Processed 73/100 articles - 3 Reliable Dividend Stocks Offering Up To 9.5% Yield
+2025-01-30 16:37:24,300 - INFO - 🔹 Processed 74/100 articles - This strategist nailed when the Trump bump would end, to the day. Now he says stocks can fall as much as 40%.
+2025-01-30 16:37:24,300 - INFO - 🔹 Processed 75/100 articles - Save $80 on Premium Bowers & Wilkins Pi8 Wireless Earbuds in 4 Stunning Colors
+2025-01-30 16:37:24,300 - INFO - 🔹 Processed 76/100 articles - How Fubo won big in its fight against giants Disney, Fox, and Warner Bros. Discovery
+2025-01-30 16:37:24,300 - INFO - 🔹 Processed 77/100 articles - Tesla could see 40% of its profits evaporate when Trump takes office, JPMorgan warns
+2025-01-30 16:37:24,300 - INFO - 🔹 Processed 78/100 articles - It's Wall Street bonus season: Here's when the biggest banks are expected to tell employees how much they made
+2025-01-30 16:37:24,300 - INFO - 🔹 Processed 79/100 articles - Is Public Storage (PSA) the Best REIT Stock to Buy Now?
+2025-01-30 16:37:24,300 - INFO - 🔹 Processed 80/100 articles - Ad industry insiders break down the M&A deals they think could shake up the industry in 2025
+2025-01-30 16:37:24,300 - INFO - 🔹 Processed 81/100 articles - Nvidia Stock Price Colossally Crashes After New DeepSeek AI Model Emerges
+2025-01-30 16:37:24,300 - INFO - 🔹 Processed 82/100 articles - Jim Cramer Says NuScale Power Corporation (SMR) and Other Smaller Companies That Offer Alternatives To The Current Nuclear Power Plants ‘Worry Him’
+2025-01-30 16:37:24,300 - INFO - 🔹 Processed 83/100 articles - Mark Zuckerberg and Jensen Huang jointly became $28 billion richer in 3 days as AI buzz reignites
+2025-01-30 16:37:24,300 - INFO - 🔹 Processed 84/100 articles - Wall Street trader rates 12 banking and trading scenes in movies and TV
+2025-01-30 16:37:24,301 - INFO - 🔹 Processed 85/100 articles - How devastating will the LA wildfires be? Place your bets.
+2025-01-30 16:37:24,301 - INFO - 🔹 Processed 86/100 articles - Merck & Co., Inc. (MRK): Is This Healthcare Stock A Good Buy?
+2025-01-30 16:37:24,301 - INFO - 🔹 Processed 87/100 articles - 3 Dividend Stocks To Enhance Your Portfolio
+2025-01-30 16:37:24,301 - INFO - 🔹 Processed 88/100 articles - DeepSeek already had a $1 trillion impact — and it's just getting started
+2025-01-30 16:37:24,301 - INFO - 🔹 Processed 89/100 articles - 5 ways the Trump administration could change Wall Street in 2025
+2025-01-30 16:37:24,301 - INFO - 🔹 Processed 90/100 articles - The Trump stock market rally is fading fast
+2025-01-30 16:37:24,301 - INFO - 🔹 Processed 91/100 articles - 2025 stock market predictions from the big banks
+2025-01-30 16:37:24,301 - INFO - 🔹 Processed 92/100 articles - 5 popular sneakers you should invest in and 2 that feel like a passing trend, according to sneakerheads
+2025-01-30 16:37:24,301 - INFO - 🔹 Processed 93/100 articles - Shein backlash fails to deter shoppers: 'I spend £20 a month'
+2025-01-30 16:37:24,301 - INFO - 🔹 Processed 94/100 articles - Forget Prismatic Evolutions, I'm Buying These UK Silver Tempest Deals
+2025-01-30 16:37:24,301 - INFO - 🔹 Processed 95/100 articles - Jim Cramer on Tesla, Inc (TSLA): ‘Shares Of Tesla Are Down About 13% Year To Date’
+2025-01-30 16:37:24,301 - INFO - 🔹 Processed 96/100 articles - Nvidia, Microsoft shares tumble amid rise of China-based AI DeepSeek
+2025-01-30 16:37:24,301 - INFO - 🔹 Processed 97/100 articles - The “Restaurant-Quality” Frozen Pizza I’ll Stock in My Freezer Forever (I’m Never Buying Another Brand!)
+2025-01-30 16:37:24,301 - INFO - 🔹 Processed 98/100 articles - PharmaResearch And 2 Other Stocks That Could Be Trading Below Estimated Value
+2025-01-30 16:37:24,301 - INFO - 🔹 Processed 99/100 articles - Apple AirPods Max Are Back in Stock at Their All-Time Low Price, and You Know They’re Selling Fast
+2025-01-30 16:37:24,301 - INFO - 🔹 Processed 100/100 articles - Rupee hits record low as Indian equities slide, bearish tilt persists
+2025-01-30 16:37:24,307 - INFO - ✅ Sentiment analysis results saved successfully.
+2025-01-30 16:37:24,308 - INFO - ✅ Sentiment analysis pipeline completed.
+2025-01-30 16:40:32,017 - INFO - 🚀 Starting sentiment analysis pipeline...
+2025-01-30 16:40:32,018 - INFO - Fetching news from API...
+2025-01-30 16:40:32,196 - INFO - ✅ Successfully fetched 100 articles.
+2025-01-30 16:40:32,196 - INFO - Starting sentiment analysis...
+2025-01-30 16:40:32,196 - INFO - 🔹 Processed 1/100 articles - Remember When Nanotech Was the Next Big Thing?
+2025-01-30 16:40:32,196 - INFO - 🔹 Processed 2/100 articles - The US stock market will close on January 9 in remembrance of Jimmy Carter
+2025-01-30 16:40:32,196 - INFO - 🔹 Processed 3/100 articles - Jamie Dimon sounds the alarm on stocks, says the market is looking 'kind of inflated'
+2025-01-30 16:40:32,196 - INFO - 🔹 Processed 4/100 articles - Intel's former CEO says the market is getting DeepSeek wrong after AI chip stock rout
+2025-01-30 16:40:32,196 - INFO - 🔹 Processed 5/100 articles - 'Due for a full-blown correction': Why one CIO expects a 15% stock-market pullback early in 2025 — and how to prepare
+2025-01-30 16:40:32,196 - INFO - 🔹 Processed 6/100 articles - Walmart's multi-store managers can now make up to $620,000
+2025-01-30 16:40:32,196 - INFO - 🔹 Processed 7/100 articles - Watch the NVIDIA CES 2025 press conference live: Monday, 9:30PM ET
+2025-01-30 16:40:32,196 - INFO - 🔹 Processed 8/100 articles - Dow Jones Futures: Stock Market Sells Off As Nvidia, Palantir Tumble; What To Do Now
+2025-01-30 16:40:32,196 - INFO - 🔹 Processed 9/100 articles - U.S. stock markets tumble as investors worry about DeepSeek
+2025-01-30 16:40:32,196 - INFO - 🔹 Processed 10/100 articles - Tech stocks stage partial recovery after market rout sparked by DeepSeek's rise
+2025-01-30 16:40:32,196 - INFO - 🔹 Processed 11/100 articles - Apple's China problems keep weighing on the stock
+2025-01-30 16:40:32,196 - INFO - 🔹 Processed 12/100 articles - Stock market today: Dow, S&P 500, Nasdaq sink as jobs report blows past expectations
+2025-01-30 16:40:32,196 - INFO - 🔹 Processed 13/100 articles - Stock market today: Nasdaq clobbered, S&P 500 tumbles as AI fears rock Nvidia, tech stocks
+2025-01-30 16:40:32,196 - INFO - 🔹 Processed 14/100 articles - Worried About a Stock Market Crash? Here's What Warren Buffett Has to Say About It.
+2025-01-30 16:40:32,196 - INFO - 🔹 Processed 15/100 articles - Dow Jones Futures: Stock Market Ends 2024 On Weak Note; Tesla Deliveries Due
+2025-01-30 16:40:32,196 - INFO - 🔹 Processed 16/100 articles - Stock market today: Dow, S&P 500, Nasdaq sell off amid jobs report surprise, inflation worries
+2025-01-30 16:40:32,196 - INFO - 🔹 Processed 17/100 articles - 4 Things Warren Buffett Would Likely Do After a Stock Market Crash
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 18/100 articles - Newmont Corporation (NEM) Stock Declines While Market Improves: Some Information for Investors
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 19/100 articles - Honor’s Magic 7 Pro looks flagship through and through
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 20/100 articles - 3 US Dividend Stocks With Up To 4.8% Yield To Enhance Your Portfolio
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 21/100 articles - DeepSeek AI is crushing the competition and triggering an AI stock bloodbath
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 22/100 articles - Fresh job market data, Nvidia falls from record highs: Catalysts
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 23/100 articles - 35-Year-Old Dividend Investor Hits Nearly $1,000 Per Month, Shares His 10 Stock Picks – 'I'm Quite Happy With That'
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 24/100 articles - Retired Dividend Investor Earning $5,000 Per Month on $320K Investment Shares His 5 Stock Picks – 'I'm Not Your Conventional Investor'
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 25/100 articles - Stock market today: Dow revives as Nasdaq, S&P 500 slide amid cratered hopes for 2025 rate cuts
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 26/100 articles - 5 Predictions for the Stock Market in 2025 -- and Which Stocks Will Soar the Most If They're Right
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 27/100 articles - 3 Ultra-Safe Vanguard ETFs to Buy, Even If There's a Stock Market Sell-Off in 2025
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 28/100 articles - Stock market today: Dow, S&P 500, Nasdaq sell off amid jobs report surprise, fresh inflation worries
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 29/100 articles - Masayoshi Son Bet Billions on the iPhone—3 Years Before It Existed
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 30/100 articles - Nvidia’s GeForce RTX 5090 Review: A Video Card With AI
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 31/100 articles - Should Value Investors Buy Concrete Pumping Holdings (BBCP) Stock?
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 32/100 articles - Tesla Sales Drop for First Time in Over a Decade While China’s BYD Rises
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 33/100 articles - Nvidia sheds $600 billion in market cap as Chinese AI startup DeepSeek spurs brutal rout of tech stocks
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 34/100 articles - 14 of the best specialty items to get at Aldi this month for $5 or less
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 35/100 articles - Morgan Freeman may have scored a 3,000% return on Tesla stock: 'I'm a huge fan of Elon Musk'
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 36/100 articles - Samsung Galaxy S25 Ultra vs. OnePlus 13: A battle of big, powerful Android phones
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 37/100 articles - The late Charlie Munger made a contrarian bet at 99, doubling his money — and clashed with Elon Musk over taking risks
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 38/100 articles - LVMH's Bernard Arnault ousts Larry Ellison as the world's 4th-richest person after gaining $15 billion in one day
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 39/100 articles - DeepSeek unleashes ‘Janus Pro 7B’ vision model amidst AI stock bloodbath, igniting fresh fears of Chinese tech dominance
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 40/100 articles - Peter Schiff Warns 'A Financial Tsunami' Will Crash US Markets As Japan's Yields Soar
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 41/100 articles - Nvidia stock jumps 4% before CEO Jensen Huang's CES keynote
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 42/100 articles - Top 25 global banks post 27% increase in market cap in 2024, reveals GlobalData
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 43/100 articles - 3 Dividend Stocks To Consider With Yields Up To 5.9%
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 44/100 articles - 'Big Short' investor Michael Burry kept quiet, piled into China tech, and won big with a stock bet in 2024
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 45/100 articles - Investors more 'selective' after DeepSeek sparked tech sell-off
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 46/100 articles - Elon Musk, Jeff Bezos, and 8 other tycoons got $500 billion richer in 2024 — and are now worth more than $2 trillion
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 47/100 articles - DeepSeek Releases Open-Source AI Image Generator as American Stocks Continue to Crater
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 48/100 articles - 2025 will be the year of EV bargains – here are the 9 best second-hand buys that I've driven
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 49/100 articles - Exxon Mobil Corporation's (NYSE:XOM) Fundamentals Look Pretty Strong: Could The Market Be Wrong About The Stock?
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 50/100 articles - Who foresaw the DeepSeek-caused sell-off of Magnificent 7 stocks? Hedge funds, which have been cutting exposure for months
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 51/100 articles - Surgeon general warning, TikTok ban benefits: Asking for a Trend
+2025-01-30 16:40:32,197 - INFO - 🔹 Processed 52/100 articles - Investors worry DeepSeek reduces AI chip demand, but there's a case for remaining bullish on Nvidia
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 53/100 articles - Let's Be Honest, AI at CES 2025 Was All About Nvidia
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 54/100 articles - What do surging bond yields mean for your finances?
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 55/100 articles - Ford Plunges 27% in 6 Months: Buy, Sell or Hold the Stock?
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 56/100 articles - DeepSeek's ultra-cost-effective AI plummets NVIDIA stock prices — wiping out $500 billion in market valuation
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 57/100 articles - Cold weather forecasts for January spark a 24% surge in natural gas futures
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 58/100 articles - Investor Hits $300K Goal With $4.4M Portfolio, Shares His Top 10 Stock Picks – 35 Years Of Investing, Strategy and Big Wins From IMMU
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 59/100 articles - DeepSeek is going to be the biggest topic in tech earnings this week, analysts say
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 60/100 articles - Most Americans see economic difficulty ahead in 2025 but not Republicans
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 61/100 articles - I'm a financial writer, but I'm not teaching my teenagers about investing. It's hard to get excited about stocks before you have an income.
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 62/100 articles - MicroStrategy's Big Bet On Bitcoin Went Stratospheric
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 63/100 articles - Insiders At Las Vegas Sands Sold US$17m In Stock, Alluding To Potential Weakness
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 64/100 articles - Loud luxury and logo-mania need a big revival and quiet luxury needs to die if brands want to keep making money, BofA analysts say
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 65/100 articles - Top White House advisor says DeepSeek may have used OpenAI's models for training
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 66/100 articles - Analysts embrace ServiceTitan’s market-share potential in parade of buy ratings
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 67/100 articles - Airbus had a way better 2024 than Boeing after delivering 766 commercial aircraft
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 68/100 articles - Intel Shares Surge 7.6% Amid Acquisition Rumors
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 69/100 articles - DeepSeek proves AI innovation isn’t ‘dictated’ by Silicon Valley
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 70/100 articles - Dividend Investor Retired at 39 Living Off Dividend Income Shares His Top 4 Stocks – 'It's Absolutely Doable'
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 71/100 articles - Why Tech Stocks Are Dropping Monday
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 72/100 articles - If You Invested $10,000 In Johnson & Johnson Stock 10 Years Ago, How Much Would You Have Now?
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 73/100 articles - 3 Reliable Dividend Stocks Offering Up To 9.5% Yield
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 74/100 articles - This strategist nailed when the Trump bump would end, to the day. Now he says stocks can fall as much as 40%.
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 75/100 articles - Save $80 on Premium Bowers & Wilkins Pi8 Wireless Earbuds in 4 Stunning Colors
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 76/100 articles - How Fubo won big in its fight against giants Disney, Fox, and Warner Bros. Discovery
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 77/100 articles - Tesla could see 40% of its profits evaporate when Trump takes office, JPMorgan warns
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 78/100 articles - It's Wall Street bonus season: Here's when the biggest banks are expected to tell employees how much they made
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 79/100 articles - Is Public Storage (PSA) the Best REIT Stock to Buy Now?
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 80/100 articles - Ad industry insiders break down the M&A deals they think could shake up the industry in 2025
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 81/100 articles - Nvidia Stock Price Colossally Crashes After New DeepSeek AI Model Emerges
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 82/100 articles - Jim Cramer Says NuScale Power Corporation (SMR) and Other Smaller Companies That Offer Alternatives To The Current Nuclear Power Plants ‘Worry Him’
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 83/100 articles - Mark Zuckerberg and Jensen Huang jointly became $28 billion richer in 3 days as AI buzz reignites
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 84/100 articles - Wall Street trader rates 12 banking and trading scenes in movies and TV
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 85/100 articles - How devastating will the LA wildfires be? Place your bets.
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 86/100 articles - Merck & Co., Inc. (MRK): Is This Healthcare Stock A Good Buy?
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 87/100 articles - 3 Dividend Stocks To Enhance Your Portfolio
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 88/100 articles - DeepSeek already had a $1 trillion impact — and it's just getting started
+2025-01-30 16:40:32,198 - INFO - 🔹 Processed 89/100 articles - 5 ways the Trump administration could change Wall Street in 2025
+2025-01-30 16:40:32,199 - INFO - 🔹 Processed 90/100 articles - The Trump stock market rally is fading fast
+2025-01-30 16:40:32,199 - INFO - 🔹 Processed 91/100 articles - 2025 stock market predictions from the big banks
+2025-01-30 16:40:32,199 - INFO - 🔹 Processed 92/100 articles - 5 popular sneakers you should invest in and 2 that feel like a passing trend, according to sneakerheads
+2025-01-30 16:40:32,199 - INFO - 🔹 Processed 93/100 articles - Shein backlash fails to deter shoppers: 'I spend £20 a month'
+2025-01-30 16:40:32,199 - INFO - 🔹 Processed 94/100 articles - Forget Prismatic Evolutions, I'm Buying These UK Silver Tempest Deals
+2025-01-30 16:40:32,199 - INFO - 🔹 Processed 95/100 articles - Jim Cramer on Tesla, Inc (TSLA): ‘Shares Of Tesla Are Down About 13% Year To Date’
+2025-01-30 16:40:32,199 - INFO - 🔹 Processed 96/100 articles - Nvidia, Microsoft shares tumble amid rise of China-based AI DeepSeek
+2025-01-30 16:40:32,199 - INFO - 🔹 Processed 97/100 articles - The “Restaurant-Quality” Frozen Pizza I’ll Stock in My Freezer Forever (I’m Never Buying Another Brand!)
+2025-01-30 16:40:32,199 - INFO - 🔹 Processed 98/100 articles - PharmaResearch And 2 Other Stocks That Could Be Trading Below Estimated Value
+2025-01-30 16:40:32,199 - INFO - 🔹 Processed 99/100 articles - Apple AirPods Max Are Back in Stock at Their All-Time Low Price, and You Know They’re Selling Fast
+2025-01-30 16:40:32,199 - INFO - 🔹 Processed 100/100 articles - Rupee hits record low as Indian equities slide, bearish tilt persists
+2025-01-30 16:40:32,202 - INFO - ✅ Sentiment analysis results saved successfully.
+2025-01-30 16:40:32,202 - INFO - ✅ Sentiment analysis pipeline completed.
+2025-01-30 16:40:34,743 - INFO - 🚀 Starting sentiment analysis pipeline...
+2025-01-30 16:40:34,743 - INFO - Fetching news from API...
+2025-01-30 16:40:34,923 - INFO - ✅ Successfully fetched 100 articles.
+2025-01-30 16:40:34,924 - INFO - Starting sentiment analysis...
+2025-01-30 16:40:34,924 - INFO - 🔹 Processed 1/100 articles - Remember When Nanotech Was the Next Big Thing?
+2025-01-30 16:40:34,924 - INFO - 🔹 Processed 2/100 articles - The US stock market will close on January 9 in remembrance of Jimmy Carter
+2025-01-30 16:40:34,924 - INFO - 🔹 Processed 3/100 articles - Jamie Dimon sounds the alarm on stocks, says the market is looking 'kind of inflated'
+2025-01-30 16:40:34,924 - INFO - 🔹 Processed 4/100 articles - Intel's former CEO says the market is getting DeepSeek wrong after AI chip stock rout
+2025-01-30 16:40:34,924 - INFO - 🔹 Processed 5/100 articles - 'Due for a full-blown correction': Why one CIO expects a 15% stock-market pullback early in 2025 — and how to prepare
+2025-01-30 16:40:34,924 - INFO - 🔹 Processed 6/100 articles - Walmart's multi-store managers can now make up to $620,000
+2025-01-30 16:40:34,924 - INFO - 🔹 Processed 7/100 articles - Watch the NVIDIA CES 2025 press conference live: Monday, 9:30PM ET
+2025-01-30 16:40:34,924 - INFO - 🔹 Processed 8/100 articles - Dow Jones Futures: Stock Market Sells Off As Nvidia, Palantir Tumble; What To Do Now
+2025-01-30 16:40:34,925 - INFO - 🔹 Processed 9/100 articles - U.S. stock markets tumble as investors worry about DeepSeek
+2025-01-30 16:40:34,925 - INFO - 🔹 Processed 10/100 articles - Tech stocks stage partial recovery after market rout sparked by DeepSeek's rise
+2025-01-30 16:40:34,925 - INFO - 🔹 Processed 11/100 articles - Apple's China problems keep weighing on the stock
+2025-01-30 16:40:34,925 - INFO - 🔹 Processed 12/100 articles - Stock market today: Dow, S&P 500, Nasdaq sink as jobs report blows past expectations
+2025-01-30 16:40:34,925 - INFO - 🔹 Processed 13/100 articles - Stock market today: Nasdaq clobbered, S&P 500 tumbles as AI fears rock Nvidia, tech stocks
+2025-01-30 16:40:34,925 - INFO - 🔹 Processed 14/100 articles - Worried About a Stock Market Crash? Here's What Warren Buffett Has to Say About It.
+2025-01-30 16:40:34,925 - INFO - 🔹 Processed 15/100 articles - Dow Jones Futures: Stock Market Ends 2024 On Weak Note; Tesla Deliveries Due
+2025-01-30 16:40:34,925 - INFO - 🔹 Processed 16/100 articles - Stock market today: Dow, S&P 500, Nasdaq sell off amid jobs report surprise, inflation worries
+2025-01-30 16:40:34,925 - INFO - 🔹 Processed 17/100 articles - 4 Things Warren Buffett Would Likely Do After a Stock Market Crash
+2025-01-30 16:40:34,925 - INFO - 🔹 Processed 18/100 articles - Newmont Corporation (NEM) Stock Declines While Market Improves: Some Information for Investors
+2025-01-30 16:40:34,925 - INFO - 🔹 Processed 19/100 articles - Honor’s Magic 7 Pro looks flagship through and through
+2025-01-30 16:40:34,925 - INFO - 🔹 Processed 20/100 articles - 3 US Dividend Stocks With Up To 4.8% Yield To Enhance Your Portfolio
+2025-01-30 16:40:34,925 - INFO - 🔹 Processed 21/100 articles - DeepSeek AI is crushing the competition and triggering an AI stock bloodbath
+2025-01-30 16:40:34,925 - INFO - 🔹 Processed 22/100 articles - Fresh job market data, Nvidia falls from record highs: Catalysts
+2025-01-30 16:40:34,925 - INFO - 🔹 Processed 23/100 articles - 35-Year-Old Dividend Investor Hits Nearly $1,000 Per Month, Shares His 10 Stock Picks – 'I'm Quite Happy With That'
+2025-01-30 16:40:34,925 - INFO - 🔹 Processed 24/100 articles - Retired Dividend Investor Earning $5,000 Per Month on $320K Investment Shares His 5 Stock Picks – 'I'm Not Your Conventional Investor'
+2025-01-30 16:40:34,925 - INFO - 🔹 Processed 25/100 articles - Stock market today: Dow revives as Nasdaq, S&P 500 slide amid cratered hopes for 2025 rate cuts
+2025-01-30 16:40:34,926 - INFO - 🔹 Processed 26/100 articles - 5 Predictions for the Stock Market in 2025 -- and Which Stocks Will Soar the Most If They're Right
+2025-01-30 16:40:34,926 - INFO - 🔹 Processed 27/100 articles - 3 Ultra-Safe Vanguard ETFs to Buy, Even If There's a Stock Market Sell-Off in 2025
+2025-01-30 16:40:34,926 - INFO - 🔹 Processed 28/100 articles - Stock market today: Dow, S&P 500, Nasdaq sell off amid jobs report surprise, fresh inflation worries
+2025-01-30 16:40:34,926 - INFO - 🔹 Processed 29/100 articles - Masayoshi Son Bet Billions on the iPhone—3 Years Before It Existed
+2025-01-30 16:40:34,926 - INFO - 🔹 Processed 30/100 articles - Nvidia’s GeForce RTX 5090 Review: A Video Card With AI
+2025-01-30 16:40:34,926 - INFO - 🔹 Processed 31/100 articles - Should Value Investors Buy Concrete Pumping Holdings (BBCP) Stock?
+2025-01-30 16:40:34,926 - INFO - 🔹 Processed 32/100 articles - Tesla Sales Drop for First Time in Over a Decade While China’s BYD Rises
+2025-01-30 16:40:34,926 - INFO - 🔹 Processed 33/100 articles - Nvidia sheds $600 billion in market cap as Chinese AI startup DeepSeek spurs brutal rout of tech stocks
+2025-01-30 16:40:34,926 - INFO - 🔹 Processed 34/100 articles - 14 of the best specialty items to get at Aldi this month for $5 or less
+2025-01-30 16:40:34,926 - INFO - 🔹 Processed 35/100 articles - Morgan Freeman may have scored a 3,000% return on Tesla stock: 'I'm a huge fan of Elon Musk'
+2025-01-30 16:40:34,926 - INFO - 🔹 Processed 36/100 articles - Samsung Galaxy S25 Ultra vs. OnePlus 13: A battle of big, powerful Android phones
+2025-01-30 16:40:34,926 - INFO - 🔹 Processed 37/100 articles - The late Charlie Munger made a contrarian bet at 99, doubling his money — and clashed with Elon Musk over taking risks
+2025-01-30 16:40:34,926 - INFO - 🔹 Processed 38/100 articles - LVMH's Bernard Arnault ousts Larry Ellison as the world's 4th-richest person after gaining $15 billion in one day
+2025-01-30 16:40:34,926 - INFO - 🔹 Processed 39/100 articles - DeepSeek unleashes ‘Janus Pro 7B’ vision model amidst AI stock bloodbath, igniting fresh fears of Chinese tech dominance
+2025-01-30 16:40:34,926 - INFO - 🔹 Processed 40/100 articles - Peter Schiff Warns 'A Financial Tsunami' Will Crash US Markets As Japan's Yields Soar
+2025-01-30 16:40:34,926 - INFO - 🔹 Processed 41/100 articles - Nvidia stock jumps 4% before CEO Jensen Huang's CES keynote
+2025-01-30 16:40:34,926 - INFO - 🔹 Processed 42/100 articles - Top 25 global banks post 27% increase in market cap in 2024, reveals GlobalData
+2025-01-30 16:40:34,926 - INFO - 🔹 Processed 43/100 articles - 3 Dividend Stocks To Consider With Yields Up To 5.9%
+2025-01-30 16:40:34,926 - INFO - 🔹 Processed 44/100 articles - 'Big Short' investor Michael Burry kept quiet, piled into China tech, and won big with a stock bet in 2024
+2025-01-30 16:40:34,926 - INFO - 🔹 Processed 45/100 articles - Investors more 'selective' after DeepSeek sparked tech sell-off
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 46/100 articles - Elon Musk, Jeff Bezos, and 8 other tycoons got $500 billion richer in 2024 — and are now worth more than $2 trillion
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 47/100 articles - DeepSeek Releases Open-Source AI Image Generator as American Stocks Continue to Crater
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 48/100 articles - 2025 will be the year of EV bargains – here are the 9 best second-hand buys that I've driven
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 49/100 articles - Exxon Mobil Corporation's (NYSE:XOM) Fundamentals Look Pretty Strong: Could The Market Be Wrong About The Stock?
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 50/100 articles - Who foresaw the DeepSeek-caused sell-off of Magnificent 7 stocks? Hedge funds, which have been cutting exposure for months
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 51/100 articles - Surgeon general warning, TikTok ban benefits: Asking for a Trend
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 52/100 articles - Investors worry DeepSeek reduces AI chip demand, but there's a case for remaining bullish on Nvidia
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 53/100 articles - Let's Be Honest, AI at CES 2025 Was All About Nvidia
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 54/100 articles - What do surging bond yields mean for your finances?
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 55/100 articles - Ford Plunges 27% in 6 Months: Buy, Sell or Hold the Stock?
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 56/100 articles - DeepSeek's ultra-cost-effective AI plummets NVIDIA stock prices — wiping out $500 billion in market valuation
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 57/100 articles - Cold weather forecasts for January spark a 24% surge in natural gas futures
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 58/100 articles - Investor Hits $300K Goal With $4.4M Portfolio, Shares His Top 10 Stock Picks – 35 Years Of Investing, Strategy and Big Wins From IMMU
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 59/100 articles - DeepSeek is going to be the biggest topic in tech earnings this week, analysts say
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 60/100 articles - Most Americans see economic difficulty ahead in 2025 but not Republicans
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 61/100 articles - I'm a financial writer, but I'm not teaching my teenagers about investing. It's hard to get excited about stocks before you have an income.
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 62/100 articles - MicroStrategy's Big Bet On Bitcoin Went Stratospheric
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 63/100 articles - Insiders At Las Vegas Sands Sold US$17m In Stock, Alluding To Potential Weakness
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 64/100 articles - Loud luxury and logo-mania need a big revival and quiet luxury needs to die if brands want to keep making money, BofA analysts say
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 65/100 articles - Top White House advisor says DeepSeek may have used OpenAI's models for training
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 66/100 articles - Analysts embrace ServiceTitan’s market-share potential in parade of buy ratings
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 67/100 articles - Airbus had a way better 2024 than Boeing after delivering 766 commercial aircraft
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 68/100 articles - Intel Shares Surge 7.6% Amid Acquisition Rumors
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 69/100 articles - DeepSeek proves AI innovation isn’t ‘dictated’ by Silicon Valley
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 70/100 articles - Dividend Investor Retired at 39 Living Off Dividend Income Shares His Top 4 Stocks – 'It's Absolutely Doable'
+2025-01-30 16:40:34,927 - INFO - 🔹 Processed 71/100 articles - Why Tech Stocks Are Dropping Monday
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 72/100 articles - If You Invested $10,000 In Johnson & Johnson Stock 10 Years Ago, How Much Would You Have Now?
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 73/100 articles - 3 Reliable Dividend Stocks Offering Up To 9.5% Yield
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 74/100 articles - This strategist nailed when the Trump bump would end, to the day. Now he says stocks can fall as much as 40%.
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 75/100 articles - Save $80 on Premium Bowers & Wilkins Pi8 Wireless Earbuds in 4 Stunning Colors
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 76/100 articles - How Fubo won big in its fight against giants Disney, Fox, and Warner Bros. Discovery
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 77/100 articles - Tesla could see 40% of its profits evaporate when Trump takes office, JPMorgan warns
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 78/100 articles - It's Wall Street bonus season: Here's when the biggest banks are expected to tell employees how much they made
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 79/100 articles - Is Public Storage (PSA) the Best REIT Stock to Buy Now?
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 80/100 articles - Ad industry insiders break down the M&A deals they think could shake up the industry in 2025
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 81/100 articles - Nvidia Stock Price Colossally Crashes After New DeepSeek AI Model Emerges
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 82/100 articles - Jim Cramer Says NuScale Power Corporation (SMR) and Other Smaller Companies That Offer Alternatives To The Current Nuclear Power Plants ‘Worry Him’
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 83/100 articles - Mark Zuckerberg and Jensen Huang jointly became $28 billion richer in 3 days as AI buzz reignites
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 84/100 articles - Wall Street trader rates 12 banking and trading scenes in movies and TV
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 85/100 articles - How devastating will the LA wildfires be? Place your bets.
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 86/100 articles - Merck & Co., Inc. (MRK): Is This Healthcare Stock A Good Buy?
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 87/100 articles - 3 Dividend Stocks To Enhance Your Portfolio
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 88/100 articles - DeepSeek already had a $1 trillion impact — and it's just getting started
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 89/100 articles - 5 ways the Trump administration could change Wall Street in 2025
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 90/100 articles - The Trump stock market rally is fading fast
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 91/100 articles - 2025 stock market predictions from the big banks
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 92/100 articles - 5 popular sneakers you should invest in and 2 that feel like a passing trend, according to sneakerheads
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 93/100 articles - Shein backlash fails to deter shoppers: 'I spend £20 a month'
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 94/100 articles - Forget Prismatic Evolutions, I'm Buying These UK Silver Tempest Deals
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 95/100 articles - Jim Cramer on Tesla, Inc (TSLA): ‘Shares Of Tesla Are Down About 13% Year To Date’
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 96/100 articles - Nvidia, Microsoft shares tumble amid rise of China-based AI DeepSeek
+2025-01-30 16:40:34,928 - INFO - 🔹 Processed 97/100 articles - The “Restaurant-Quality” Frozen Pizza I’ll Stock in My Freezer Forever (I’m Never Buying Another Brand!)
+2025-01-30 16:40:34,929 - INFO - 🔹 Processed 98/100 articles - PharmaResearch And 2 Other Stocks That Could Be Trading Below Estimated Value
+2025-01-30 16:40:34,929 - INFO - 🔹 Processed 99/100 articles - Apple AirPods Max Are Back in Stock at Their All-Time Low Price, and You Know They’re Selling Fast
+2025-01-30 16:40:34,929 - INFO - 🔹 Processed 100/100 articles - Rupee hits record low as Indian equities slide, bearish tilt persists
+2025-01-30 16:40:34,932 - INFO - ✅ Sentiment analysis results saved successfully.
+2025-01-30 16:40:34,932 - INFO - ✅ Sentiment analysis pipeline completed.

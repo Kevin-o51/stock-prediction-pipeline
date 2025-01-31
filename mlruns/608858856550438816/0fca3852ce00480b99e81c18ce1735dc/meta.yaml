@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/608858856550438816/0fca3852ce00480b99e81c18ce1735dc/artifacts
+end_time: 1738266942161
+entry_point_name: ''
+experiment_id: '608858856550438816'
+lifecycle_stage: active
+run_id: 0fca3852ce00480b99e81c18ce1735dc
+run_name: angry-sloth-432
+run_uuid: 0fca3852ce00480b99e81c18ce1735dc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738266938506
+status: 3
+tags: []
+user_id: aghakeivan

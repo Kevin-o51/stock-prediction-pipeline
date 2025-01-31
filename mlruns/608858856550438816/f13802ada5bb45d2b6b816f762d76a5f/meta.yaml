@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/608858856550438816/f13802ada5bb45d2b6b816f762d76a5f/artifacts
+end_time: 1738254999606
+entry_point_name: ''
+experiment_id: '608858856550438816'
+lifecycle_stage: active
+run_id: f13802ada5bb45d2b6b816f762d76a5f
+run_name: monumental-bug-746
+run_uuid: f13802ada5bb45d2b6b816f762d76a5f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738254999538
+status: 3
+tags: []
+user_id: aghakeivan

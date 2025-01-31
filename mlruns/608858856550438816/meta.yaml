@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/608858856550438816
+creation_time: 1738254999379
+experiment_id: '608858856550438816'
+last_update_time: 1738254999379
+lifecycle_stage: active
+name: Stock_Prediction_Model

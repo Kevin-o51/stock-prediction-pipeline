@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/608858856550438816/66cfb2b7d1ab46f59dce2fea6c8984a3/artifacts
+end_time: 1738256577525
+entry_point_name: ''
+experiment_id: '608858856550438816'
+lifecycle_stage: active
+run_id: 66cfb2b7d1ab46f59dce2fea6c8984a3
+run_name: learned-fly-792
+run_uuid: 66cfb2b7d1ab46f59dce2fea6c8984a3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738256574179
+status: 3
+tags: []
+user_id: aghakeivan

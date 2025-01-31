@@ -1,0 +1,55 @@
+import pandas as pd
+import numpy as np
+import joblib
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.metrics import mean_absolute_error
+
+# Load dataset
+data = pd.read_csv("data/merged_data.csv")
+
+# Define features and target
+FEATURES = ['Open', 'High', 'Low', 'Close', 'Volume', 'Dividends', 'Stock Splits', 'sentiment_score_normalized']
+TARGET = 'Close'
+
+# Drop missing values
+data = data.dropna(subset=FEATURES + [TARGET])
+
+# Split data
+X = data[FEATURES]
+y = data[TARGET]
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Define model & hyperparameters
+param_grid = {
+    'n_estimators': [100, 200],
+    'max_depth': [None, 10, 20],
+    'min_samples_split': [2, 5]
+}
+model = RandomForestRegressor(random_state=42)
+grid_search = GridSearchCV(model, param_grid, cv=3, scoring='neg_mean_absolute_error', n_jobs=-1)
+
+# Train model
+print("\n🔹 Performing Grid Search for Best Hyperparameters...")
+grid_search.fit(X_train, y_train)
+best_model = grid_search.best_estimator_
+
+# Evaluate model
+y_pred = best_model.predict(X_test)
+mae = mean_absolute_error(y_test, y_pred)
+print(f"✅ Best Hyperparameters: {grid_search.best_params_}")
+print(f"✅ Optimized Model Trained | MAE: {mae:.4f}")
+
+# Save model
+joblib.dump(best_model, "models/stock_model.pkl")
+print("✅ Optimized Model saved to models/stock_model.pkl")
+
+# Save predictions to CSV
+predictions_df = pd.DataFrame({'Actual': y_test, 'Predicted': y_pred})
+predictions_df.to_csv("/Users/aghakeivan/Documents/Stocks/data/predictions.csv", index=False)
+print("✅ Predictions saved to data/predictions.csv")
+
+# Display experiment tracking link
+print("\n🏃 View run at: http://localhost:5001/#/experiments/608858856550438816/runs/0fca3852ce00480b99e81c18ce1735dc")
+print("🧪 View experiment at: http://localhost:5001/#/experiments/608858856550438816")
+
